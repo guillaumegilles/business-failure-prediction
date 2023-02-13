@@ -1,0 +1,85 @@
+---
+title: "Business Failure Prediction"
+author: "Florence, Nicoletta and Guillaume "
+date: "16/02/2023"
+output: 
+  revealjs::revealjs_presentation:
+    theme: "serif"
+    transition: "fade"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+install.packages("revealjs") #required packages for the revealjs presentation
+```
+
+## Objectives
+
+This project’s goal is to predict french companies’ failures based on financial ratios as well as non-financial ratios.
+
+**Let's dive in**:
+
+1. the dataset
+2. few steps in our exploraty data analysis (EDA)
+3. planning
+
+## Dataset (1/2)
+
+### --- Financial ratios: Z''-score (Altman 1983) ---
+
+<small>
+In addition to traditional ratio, we included 5 features engineered ratios based on Altman's `Z''-score`.
+
+$X1 = Working \: capital \div Total \: assets$
+
+`X1` measures of the net liquid assets of the firm relative to the total capitalization.
+
+$X2 =  Retained \: earnings \div Total \: assets$
+
+`X2` refers to the earned surplus of a firm over its entire life. This measure of cumulative profitability over time.
+
+$X3 = Earnings \: before \: interest \: and \: taxes \div Total \: assets$
+
+`X3` measures of the true productivity or profitability of the assets of a firm.
+
+$X4 = Book \: value \: of \: equity \div Book \: value \: of \: total \: liabilities$
+
+`X4` measures of the debt level
+
+$X5 = Sales \div Total \: assets$
+
+Sources :
+Banque de France
+</small>
+
+## Dataset (2/2)
+
+### --- data.gouv.fr ---
+
+<small>
+
+1. Département ;
+2. Année ;
+3. Les variations de populations : pour estimer l'attractivité des départements ;
+4. `fdepinv` : total des investissements exprimés en euros par habitant ;
+5. `fcafn` : CAF nette du remboursement en capital des emprunts exprimée en euros par habitant ;
+6. `fres2` : résultat d'ensemble (résultat comptable - opération de financement)
+
+Sources 
+
+[Comptes individuels des communes à compter de 2000](https://data.economie.gouv.fr/explore/dataset/comptes-individuels-des-communes-fichier-global-a-compter-de-2000/information/)
+
+</small>
+
+## Timeline
+
+https://github.com/daattali/timevis
+
+```
+1. 24-02 / Finaliser le dataset / 
+  2. 15-03 / Exploratory data analysis (EDA)
+    3. 31-03 / Data clustering
+      4. 12-04 / ML model for each clusters
+        5. 28-04 / Backtesting
+          6. 12-05 / Shiny App
+```
