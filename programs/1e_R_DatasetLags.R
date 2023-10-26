@@ -143,7 +143,7 @@ df_noId <- select(df_noNA,-"id_hashed")
 saveRDS(df_noId,"E:\\DataScientist\\project\\forecastingDEF\\data/df_lags_clean.RDS")
 
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%
 
 #datasets with one obs per firm
 
