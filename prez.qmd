@@ -1,0 +1,43 @@
+---
+title: "Business Failure Prediction"
+author: "Guillaume Gilles"
+format:
+    revealjs:
+        theme: night
+        slide-number: true
+        incremental: true
+---
+
+## Problématique métier
+
+Réaliser un POC, proof of concept, pour la Direction des Entreprises pour obtenir
+un indicateur de prédiction sur la **défaillance des entreprises**
+
+## Jeu de données
+
+Les sources de données :
+
+1. Les liasses fiscales collectées par la Banque de France auprès des entreprises
+   françaises (chiffre d»affaires supérieur à 750 k€)
+2. Les greffes des tribunaux de commerce en France
+3. données INSEE
+
+## Méthodologie
+
+- feature enginerring : _zscore_
+- lag
+- baseline : random forest
+- R
+
+## Succés
+
+## Difficultés
+
+- jeu de données déséquilibrés
+- volumétrie de donnée
+
+## Axes d’amélioration
+
+- utiliser xgboost en utilisant un paramètre de déséquilibre du jeu de données
+- xgboost works with python and R
+- SMOTE
